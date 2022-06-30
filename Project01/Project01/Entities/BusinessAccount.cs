@@ -5,9 +5,12 @@ namespace Project01.Entities {
          get; set;
       }
 
+
+      public BusinessAccount( ) {
+      }
       public BusinessAccount( int _number , string _holder , double _balance , double _loanLimit ) :
          base( _number , _holder , _balance ) {
-         
+
          LoanLimit = _loanLimit;
       }
 
