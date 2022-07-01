@@ -15,19 +15,19 @@ namespace Project01.Entities {
       public Account( ) {
       }
       public Account( int _number , string _holder , double _balance ) {
-        
+
          Number = _number;
          Holder = _holder;
          Balance = _balance;
       }
 
 
-      public void WithDraw( double _amount ) {
-        
-         Balance -= _amount;
+      public virtual void WithDraw( double _amount ) {
+
+         Balance -= ( _amount + 5 );
       }
       public void Deposit( double _amount ) {
-         
+
          Balance += _amount;
       }
    }

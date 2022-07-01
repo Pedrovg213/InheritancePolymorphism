@@ -19,5 +19,11 @@ namespace Project01.Entities {
 
          Balance += Balance * InterestRate;
       }
+
+
+      public override void WithDraw( double _amount ) {
+         
+         Balance -= _amount;
+      }
    }
 }

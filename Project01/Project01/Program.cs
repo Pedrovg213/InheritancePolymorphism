@@ -5,37 +5,17 @@ namespace Project01 {
    internal class Program {
       static void Main( string[ ] args ) {
 
-         Account account = new Account(1001, "José", 700.00);
-         BusinessAccount bAccount = new BusinessAccount(1010, "João", 5000.00, 1000.0);
-         SavingsAccount sAccount = new SavingsAccount(1101, "Ana", 400, .2);
+         Account account01 = new Account(1001, "Jon", 500);
+         Account account02 = new SavingsAccount(1010, "Anna", 500, .01);
+         Account account03 = new BusinessAccount(1100, "Algusto", 500, 300);
 
-         // UPCASTING
+         account01.WithDraw( 20 );
+         account02.WithDraw( 20 );
+         account03.WithDraw( 20 );
 
-         Account account01 = bAccount;
-         Account account02 = sAccount;
-
-         Console.WriteLine( account01.Holder );
-         Console.WriteLine( account02.Holder );
-
-         // DOWNCASTING
-
-         if ( account01 is BusinessAccount ) {
-
-            //BusinessAccount business01 = (BusinessAccount)account01;
-            BusinessAccount bAccount01 = account01 as BusinessAccount;
-
-            bAccount01.Loan( 100 );
-
-            Console.WriteLine( bAccount01.Balance );
-         }
-         if ( account02 is BusinessAccount ) {
-
-            BusinessAccount bAccount01 = account02 as BusinessAccount;
-
-            bAccount01.Loan( 200 );
-
-            Console.WriteLine( bAccount01.Balance );
-         }
+         Console.WriteLine( account01.Balance );
+         Console.WriteLine( account02.Balance );
+         Console.WriteLine( account03.Balance );
       }
    }
 }

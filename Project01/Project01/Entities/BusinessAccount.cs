@@ -20,5 +20,12 @@ namespace Project01.Entities {
          if ( _amount <= LoanLimit )
             Balance += _amount;
       }
+
+
+      public override void WithDraw( double _amount ) {
+
+         base.WithDraw( _amount );
+         Balance -= 2;
+      }
    }
 }
